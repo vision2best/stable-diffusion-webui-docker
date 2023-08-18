@@ -3,19 +3,19 @@
 set -Eeuo pipefail
 
 # TODO: maybe just use the .gitignore file to create all of these
-mkdir -vp /data/.cache \
-  /data/embeddings \
-  /data/config/ \
-  /data/models/ \
-  /data/models/Stable-diffusion \
-  /data/models/GFPGAN \
-  /data/models/RealESRGAN \
-  /data/models/LDSR \
-  /data/models/VAE
+mkdir -vp /mnt/auto/sd/.cache \
+  /mnt/auto/sd/embeddings \
+  /mnt/auto/sd/config/ \
+  /mnt/auto/sd/models/ \
+  /mnt/auto/sd/models/Stable-diffusion \
+  /mnt/auto/sd/models/GFPGAN \
+  /mnt/auto/sd/models/RealESRGAN \
+  /mnt/auto/sd/models/LDSR \
+  /mnt/auto/sd/models/VAE
 
 echo "Downloading, this might take a while..."
 
-aria2c -x 10 --disable-ipv6 --input-file /docker/links.txt --dir /data/models --continue
+aria2c -x 10 --disable-ipv6 --input-file /docker/links.txt --dir /mnt/auto/sd/models --continue
 
 echo "Checking SHAs..."
 

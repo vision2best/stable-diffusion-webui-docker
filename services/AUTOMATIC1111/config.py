@@ -7,20 +7,20 @@ import re
 import os.path
 import sys
 
-DEFAULT_FILEPATH = '/data/config/auto/config.json'
+DEFAULT_FILEPATH = '/mnt/auto/sd/config/auto/config.json'
 
 DEFAULT_OUTDIRS = {
   "outdir_samples": "",
-  "outdir_txt2img_samples": "/output/txt2img",
-  "outdir_img2img_samples": "/output/img2img",
-  "outdir_extras_samples": "/output/extras",
+  "outdir_txt2img_samples": "/mnt/auto/sd/output/txt2img",
+  "outdir_img2img_samples": "/mnt/auto/sd/output/img2img",
+  "outdir_extras_samples": "/mnt/auto/sd/output/extras",
   "outdir_grids": "",
-  "outdir_txt2img_grids": "/output/txt2img-grids",
-  "outdir_img2img_grids": "/output/img2img-grids",
-  "outdir_save": "/output/saved",
-  "outdir_init_images": "/output/init-images",
+  "outdir_txt2img_grids": "/mnt/auto/sd/output/txt2img-grids",
+  "outdir_img2img_grids": "/mnt/auto/sd/output/img2img-grids",
+  "outdir_save": "/mnt/auto/sd/output/saved",
+  "outdir_init_images": "/mnt/auto/sd/output/init-images",
 }
-RE_VALID_OUTDIR = re.compile(r"(^/output(/\.?[\w\-\_]+)+/?$)|(^\s?$)")
+RE_VALID_OUTDIR = re.compile(r"(/mnt/auto/sd/output(/\.?[\w\-\_]+)+/?$)|(^\s?$)")
 
 DEFAULT_OTHER = {
   "font": "DejaVuSans.ttf",

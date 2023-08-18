@@ -1,5 +1,5 @@
 a111:
-  base_path: /data
+  base_path: /mnt/auto/sd
 
   checkpoints: models/Stable-diffusion
   configs: models/Stable-diffusion
